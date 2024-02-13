@@ -31,7 +31,6 @@ const HomeController = () => {
   const handleSendMessage = data => {
     dispatch(actionSetLoadingNewComment(true))
     try {
-      setTimeout(() => {
         const index = posts.findIndex(( it => it.id === data.postId ))
         if (!posts[index].commentList[0].length) {
           let list = [...posts]
@@ -50,12 +49,10 @@ const HomeController = () => {
             email: activeUser?.email,
             id: posts[index].commentList[0].length + 1
           })
-          comments.join()
           posts[index].commentList[0] = comments
           dispatch(actionSetNewComment(posts))
         }
         dispatch(actionSetLoadingNewComment(false))
-      }, 1000)
     } catch(error) {}
   }
 

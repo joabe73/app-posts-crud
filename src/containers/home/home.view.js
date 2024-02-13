@@ -34,6 +34,7 @@ const HomeView = ({ controller }) => {
         labelWeight='bold'
         bgColor={colors.main}
         float
+        pill
         onPress={() => setShowPostModal(!showPostModal)}
       />
       {showPostModal && 

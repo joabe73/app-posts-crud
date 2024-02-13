@@ -9,5 +9,6 @@ export default {
   green30: '#2eb82e',
   yellow1: '#fcba03',
   red: 'red',
+  transparent: 'transparent',
   red60: '#cc0000'
 }

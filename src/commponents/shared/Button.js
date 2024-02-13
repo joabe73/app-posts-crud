@@ -21,6 +21,10 @@ const Button = styled.TouchableOpacity`
     border-color: ${props.borderColor};
     background-color: transparent;
   `}
+  ${props => props.outlineColor && css`
+    border-width: 1px;
+    border-color: ${props.borderColor};
+  `}
   ${props => props.disabled && css`
     opacity: 0.4;
   `}
@@ -30,7 +34,7 @@ const Button = styled.TouchableOpacity`
   ${props => props.float && css`
     border-radius: 30px;
     position: absolute;
-    top: 15px;
+    top: 40px;
     right: 15px;
   `}
   ${props => props.pill && css`
@@ -38,10 +42,11 @@ const Button = styled.TouchableOpacity`
     padding: 4px 12px;
   `}
   ${props => props.shadow && css`
-    shadow-color: gray;
-    shadow-offset: 0px 0px;
+    shadow-color: ${colors.black};
+    shadow-offset: 2px 2px;
     shadow-opacity: 0.5;
     shadow-radius: 4px;
+    elevation: 1;
   `}
 `
 
