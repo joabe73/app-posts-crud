@@ -9,7 +9,7 @@ const InitialController = () => {
   const dispatch = useDispatch()
   const { loginError, initialLoading, activeUser } = useSelector((state) => state.initial)
   const { reset } = useNavigation();
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('Sincere@april.biz')
  
   const handleEmail = value => {
     setEmail(value)

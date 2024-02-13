@@ -52,7 +52,6 @@ function* requestPosts() {
     }
   } catch (error) {
     yield put(actionSetLoading(false))
-    console.log(error)
   }
 }
 
@@ -63,7 +62,6 @@ function* requestComments() {
       return response.data
     }
   } catch (error) {
-    console.log(error)
   }
 }
 
@@ -74,7 +72,6 @@ function* requestAllUsers() {
       return response.data
     }
   } catch (error) {
-    console.log(error)
   }
 }
 

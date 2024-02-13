@@ -135,7 +135,7 @@ const BoxPost = styled.View`
   width: 100%;
   ${props => props.isPost && css`
     border-width: 1px;
-    border-color: ${colors.gray50}
+    border-color: ${colors.gray50};
     border-radius: 12px;
   `}
   ${props => !props.isPost && css`

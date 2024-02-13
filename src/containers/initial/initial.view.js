@@ -5,12 +5,12 @@ import { Container, Button, Text, Input, Spinner, Spacer } from '../../commponen
 import { colors, validators } from '../../utils'
 
 const InitialView = ({ controller }) => {
-  const { email, handleEmail, handleLogin, loading, loginError } = controller
+  const { email, handleEmail, handleLogin, loading, loginError } = controller  
   
   return (
     <Container>
       <Wrapper>
-        <Text align='center' color={colors.main} title>Posts Air Liquide</Text>
+        <Text align='center' color={colors.main} title>Posts</Text>
         <Text align='center' helper color={colors.gray50}>para interagir é só informar o email cadastrado</Text>
         {loginError !== '' &&
           <>

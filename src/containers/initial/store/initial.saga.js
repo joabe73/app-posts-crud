@@ -35,7 +35,6 @@ function* actionRequestActiveUser(payload) {
   } catch (error) {
     yield put(actionSetActiveUserError('Sistema indisponível, tente novamente mais tarde!'))
     yield put(actionLoading(false))
-    console.log(error)
   }
 }
 

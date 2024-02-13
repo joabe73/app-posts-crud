@@ -2,8 +2,8 @@ const RUN_ENV = 'development'
 
 const initialConfig = {
   environment: {
-    development: ' https://jsonplaceholder.typicode.com',
-    sandbox: ' https://jsonplaceholder.typicode.com'
+    development: 'https://jsonplaceholder.typicode.com',
+    sandbox: 'https://jsonplaceholder.typicode.com'
   }
 }
 
