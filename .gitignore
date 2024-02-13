@@ -4,6 +4,7 @@
 
 # Xcode
 #
+vetor/
 build/
 *.pbxuser
 !default.pbxuser
