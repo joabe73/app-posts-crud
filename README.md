@@ -1,7 +1,13 @@
 # APP POSTS
 
 >**About this app**:
-On this app, you can participate in a forum of posts, where you can create your own post and manage it. You just need to log in with your registerd email.  
+On this app, you can participate in a forum of posts, where you can create your own post and manage it. You just need to log in with your registerd email.
+
+<p float="left">
+  <img src="./src/assets/signin.png" alt="sign in screen" width="140" height="300" />
+  <img src="./src/assets/list_posts.png" alt="post list screen" width="140" height="300" />
+  <img src="./src/assets/post_comment.png" alt="post comments" width="140" height="300" />
+</p>
 
 ###
 - List of users you can log in with on the app, or check out this link: (https://jsonplaceholder.typicode.com/users)
