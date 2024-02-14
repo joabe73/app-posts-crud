@@ -103,7 +103,6 @@ const PostCard = ({ postlist = [], pressSenMessage, pressRemovePost, userId, loa
 
 const Wrapper = styled.View`
   padding-horizontal: 6px;
-  align-items: center;
   shadow-color: ${colors.main};
   shadow-offset: 2px 2px;
   shadow-opacity: 0.5;
@@ -140,9 +139,10 @@ const Profile = styled.Image`
   margin-right: 16px;
 `
 const BoxPost = styled.View`
+  background-color: ${colors.white};
+  border-radius: 6px;
   margin-top: 8px;
   padding: 4px;
-  width: 100%;
   ${props => !props.isPost && css`
     border-radius: 6px;
     background-color: ${colors.black};

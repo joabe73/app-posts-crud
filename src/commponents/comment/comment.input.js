@@ -10,7 +10,7 @@ const CommentInput = ({ postId=null, handleSend, withTitle=false, width=70, titl
   const handleTitle = hasTitle => {
     if (hasTitle) return (
       <Input
-        titleColor={colors.main}
+        titleColor={colors.black}
         title={title}
         width={width}
         multiline
@@ -24,7 +24,7 @@ const CommentInput = ({ postId=null, handleSend, withTitle=false, width=70, titl
     <Wrapper title={withTitle}>
         {handleTitle(withTitle)}
         <Input
-          titleColor={colors.main}
+          titleColor={colors.black}
           title={desc}
           height={80}
           width={width}
@@ -34,13 +34,13 @@ const CommentInput = ({ postId=null, handleSend, withTitle=false, width=70, titl
         />
       <WrapperSend>
         <Button
-          label='Enviar'
+          label='SALVAR'
           loading={loading}
           disabled={loading}
           labelColor={colors.white}
           spinnerColor={colors.white}
           pill
-          bgColor={colors.green30}
+          bgColor={colors.black}
           onPress={() => {
             handleSend({body: message, postId, postMsg: postMessage})
             setMessage('')
@@ -53,10 +53,15 @@ const CommentInput = ({ postId=null, handleSend, withTitle=false, width=70, titl
 }
 
 const Wrapper = styled.View`
-  margin-top: 8px;
+  background-color: ${colors.gray20};
+  margin-top: 14px;
   padding: 12px;
+  shadow-color: ${colors.main};
+  shadow-offset: 2px 2px;
+  shadow-opacity: 0.5;
+  shadow-radius: 4px;
+  elevation: 1;
   border-radius: 12px;
-  border: 1px solid gray;
   flex-direction: ${props => props.title ? 'column' : 'row'};
   justify-content: space-between;
   align-items: center;

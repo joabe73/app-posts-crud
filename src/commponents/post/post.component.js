@@ -17,11 +17,11 @@ const InputPost = ({ visible, pressCancel, handleSend, loading }) => {
       >
         <WrapperContent>
           <Button
-            label='Concelar'
+            label='CANCELAR'
+            labelColor={colors.white}
             disabled={loading}
             pill
-            outline
-            borderColor={colors.red} 
+            bgColor={colors.black}
             onPress={() => pressCancel(!visible)}
           />
           <CommentInput
@@ -43,8 +43,13 @@ const Wrapper = styled.View`
   flex: 1;
 `
 const WrapperContent = styled.View`
+  shadow-color: ${colors.main};
+  shadow-offset: 2px 2px;
+  shadow-opacity: 0.5;
+  shadow-radius: 4px;
+  elevation: 1;
   padding: 16px;
-  margin-top: 22px;
+  margin-top: 60px;
 `
 
 export default InputPost
