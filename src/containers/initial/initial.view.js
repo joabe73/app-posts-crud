@@ -17,8 +17,8 @@ const InitialView = ({ controller }) => {
       behavior={isIOS ? 'padding' : false}
       >
         <Wrapper>
-          <Text align='center' color={colors.main} title>Social Posts</Text>
-          <Text align='center' helper color={colors.gray50}>para interagir é só informar o email cadastrado</Text>
+          <Text align='center' color={colors.main} weight='bold' title>Social Posts</Text>
+          <Text align='center' helper weight='bold' color={colors.gray50}>Para interagir é só informar o email cadastrado</Text>
           {loginError !== '' &&
             <>
               <Spacer height={22} />
@@ -32,18 +32,19 @@ const InitialView = ({ controller }) => {
           />
           <Spacer height={22} />
           <Button
+            spinnerColor={colors.black}
+            loading={loading}
             label='Entrar'
             labelWeight='bold'
-            labelColor={colors.main}
+            labelColor={colors.white}
             pill
+            bgColor={colors.main}
             shadow
-            outline
-            borderColor={colors.main}
+            outlineColor={colors.main}
             onPress={handleLogin}
-            disabled={!validators.emailIsValid(email)}
+            disabled={!validators.emailIsValid(email) || loading}
           />
         </Wrapper>
-        {loading && <Spinner message='Verificando usuário ...' />}
       </KeyboardAvoidingView>
     </Container>
   )
