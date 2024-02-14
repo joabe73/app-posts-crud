@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Alert } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { 
@@ -29,6 +30,7 @@ const HomeController = () => {
   }
 
   const handleSendMessage = data => {
+    const randomId = Math.floor(Math.random() * 90000)
     dispatch(actionSetLoadingNewComment(true))
     try {
         const index = posts.findIndex(( it => it.id === data.postId ))
@@ -38,7 +40,7 @@ const HomeController = () => {
             ...data,
             name: activeUser?.name,
             email: activeUser?.email,
-            id: 1
+            id: randomId
           })
           dispatch(actionSetNewComment(list))
         } else {
@@ -47,7 +49,7 @@ const HomeController = () => {
             ...data,
             name: activeUser?.name,
             email: activeUser?.email,
-            id: posts[index].commentList[0].length + 1
+            id: randomId
           })
           posts[index].commentList[0] = comments
           dispatch(actionSetNewComment(posts))
@@ -57,6 +59,7 @@ const HomeController = () => {
   }
 
   const handleSendPost = data => {
+    const randomId = Math.floor(Math.random() * 90000)
     dispatch(actionSetLoading(true))
     setTimeout(() => {
       try {
@@ -66,7 +69,7 @@ const HomeController = () => {
           body: data.body,
           userId: activeUser?.id,
           title: data.postMsg,
-          id: posts.length + 1,
+          id: randomId,
           commentList: [[]]
         }, ...posts]
       const newOrder = newList.sort((a, b) => b.id - a.id)
@@ -92,11 +95,24 @@ const HomeController = () => {
         dispatch(actionSetLoadingRemovePost(false))
       } catch(error) {}
     }, 1000)
+  }
 
+  const AlertConfirm = (id) => {
+    Alert.alert('Confirmação', 'Realmente deseja excluir esse post ?',[
+      {
+        text: 'Cancelar',
+        onPress: () => {},
+        style: 'cancel'
+      },
+      {
+        text: 'Confirmar',
+        onPress: () => handleRemovepost(id)
+      }
+    ])
   }
 
   const controller = {
-    handleRemovepost,
+    handleRemovepost: AlertConfirm,
     handleSendMessage,
     setShowPostModal,
     handleSendPost,

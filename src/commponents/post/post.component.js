@@ -26,8 +26,8 @@ const InputPost = ({ visible, pressCancel, handleSend, loading }) => {
           />
           <CommentInput
             loading={loading}
-            title='Titulo de seu post'
-            desc='Conteúdo de seu post'
+            title='Titulo do post'
+            desc='Conteúdo do post'
             width={100}
             withTitle
             handleSend={handleSend}

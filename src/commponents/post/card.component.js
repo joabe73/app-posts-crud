@@ -10,7 +10,7 @@ const handleComments = (list=[], show, pressSenMessage, postId, loadingComment) 
   return(
     <ViewWrapper>
       {<ViewWrapper>
-        {show && <CommentInput postId={postId} handleSend={pressSenMessage} desc='comentar no post...' loading={loadingComment} />}
+        {show && <CommentInput postId={postId} handleSend={pressSenMessage} desc='Comentar no post' loading={loadingComment} />}
         {list[0].length ? list[0].map((item, ix) => (
           <BoxPost key={ix}>
             <Text color={colors.main2} weight='bold' helper> por: {item.email}</Text>
@@ -103,11 +103,7 @@ const PostCard = ({ postlist = [], pressSenMessage, pressRemovePost, userId, loa
 
 const Wrapper = styled.View`
   padding-horizontal: 6px;
-  shadow-color: ${colors.main};
-  shadow-offset: 2px 2px;
-  shadow-opacity: 0.5;
-  shadow-radius: 4px;
-  elevation: 1;
+  
   border-radius: 6px;
   background-color: ${colors.gray20};
   padding-bottom: 8px;
@@ -139,6 +135,11 @@ const Profile = styled.Image`
   margin-right: 16px;
 `
 const BoxPost = styled.View`
+  shadow-color: ${colors.main};
+  shadow-offset: 3px 3px;
+  shadow-opacity: 0.5;
+  shadow-radius: 4px;
+  elevation: 4;
   background-color: ${colors.white};
   border-radius: 6px;
   margin-top: 8px;
