@@ -2,7 +2,7 @@ import React from 'react'
 import { KeyboardAvoidingView, Platform } from 'react-native'
 import styled from 'styled-components'
 
-import { Container, Button, Text, Input, Spinner, Spacer } from '../../commponents/shared'
+import { Container, Button, Text, Input, Spacer } from '../../components/shared'
 import { colors, validators } from '../../utils'
 
 const InitialView = ({ controller }) => {

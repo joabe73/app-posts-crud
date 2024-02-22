@@ -1,7 +1,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { action } from 'typesafe-actions'
 
-import { api } from '../../../service'
+import { api } from '../../service'
 
 export const initial_types = {
   request_user: 'REQUEST_ACTIVE_USER',

@@ -1,4 +1,4 @@
-import { initial_types } from './initial.saga'
+import { initial_types } from '../containers/initial/initial.model'
 const INITIAL = {
   initialLoading: false,
   activeUser: null,

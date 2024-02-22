@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { actionGetActiveUser, actionLoading } from './store/initial.saga'
+import { actionGetActiveUser, actionLoading } from './initial.model'
 import InitialView from './initial.view'
 
 const InitialController = () => {

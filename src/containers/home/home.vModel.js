@@ -7,7 +7,7 @@ import {
   actionSetNewComment, 
   actionSetLoading, 
   actionSetLoadingRemovePost,
-  actionSetLoadingNewComment } from './store/home.saga'
+  actionSetLoadingNewComment } from './home.model'
 import HomeView from './home.view'
 
 const HomeController = () => {

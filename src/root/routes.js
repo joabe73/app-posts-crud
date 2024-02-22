@@ -2,8 +2,8 @@ import React from 'react'
 import { Easing } from 'react-native'
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack'
 
-import Initial from '../containers/initial/initial.controller'
-import Home from '../containers/home/home.controller'
+import Initial from '../containers/initial/initial.vModel'
+import Home from '../containers/home/home.vModel'
 
 const { Navigator, Screen } = createStackNavigator()
 

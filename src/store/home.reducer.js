@@ -1,4 +1,4 @@
-import { home_types } from './home.saga'
+import { home_types } from '../containers/home/home.model'
 const INITIAL = {
   posts: [],
   loadingPosts: false,

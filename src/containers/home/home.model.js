@@ -1,7 +1,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import { action } from 'typesafe-actions'
 
-import { api } from '../../../service'
+import { api } from '../../service'
 
 export const home_types = {
   request_posts: 'REQUEST_POSTS',

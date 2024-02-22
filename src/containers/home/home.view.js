@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Container, Content, Button, Text, Spinner } from '../../commponents/shared'
-import { PostCard, PostComponent } from '../../commponents/post'
+import { Container, Content, Button, Spinner } from '../../components/shared'
+import { PostCard, PostComponent } from '../../components/post'
 import { colors } from '../../utils'
 
 const HomeView = ({ controller }) => {
